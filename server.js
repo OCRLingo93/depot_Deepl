@@ -72,7 +72,7 @@ app.post("/webhook", async (req, res) => {
           const texteOCR = stdout.trim();
           console.log("Texte OCR extrait:", texteOCR);
 
-          const resTranslate = await translate(texteOCR, { to: "fr" });
+          const resTranslate = await translate.translate(texteOCR, { to: "fr" });
           const texteTraduit = resTranslate.text;
           console.log("Texte traduit:", texteTraduit);
 
