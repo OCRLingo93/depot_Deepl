@@ -4,7 +4,8 @@ const fs = require("fs");
 const { exec } = require("child_process");
 const util = require("util");
 const execPromise = util.promisify(exec);
-const translate = require("@vitalets/google-translate-api");
+const translate = require("@vitalets/google-translate-api").default;
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
