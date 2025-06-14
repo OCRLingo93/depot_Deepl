@@ -83,7 +83,7 @@ app.post("/webhook", async (req, res) => {
 
       if (!texteOCR) {
         console.log("Aucun texte détecté dans l'image.");
-        // Répondre à l'utilisateur avec un message d'erreur ou ne rien faire
+        // Répondre à l'utilisateur avec un message d'erreur
         await axios.post(
           `https://graph.facebook.com/v18.0/${PHONE_NUMBER_ID}/messages`,
           {
@@ -136,3 +136,4 @@ app.post("/webhook", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Serveur démarré sur le port ${PORT}`);
 });
+
